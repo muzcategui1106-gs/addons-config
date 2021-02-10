@@ -1964,7 +1964,7 @@ spec:
                 values:
                 - ingresses
       tolerations:
-      - key: node.role.kubernetes.io/ingress
+      - key: node-role.kubernetes.io/ingress
         operator: Exists
         effect: NoSchedule
       containers:
