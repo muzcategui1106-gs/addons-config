@@ -1960,7 +1960,7 @@ spec:
             nodeSelectorTerms:
             - matchExpressions:
               - key: cloud.google.com/gke-nodepool
-                operator: in
+                operator: In
                 values:
                 - ingresses
       tolerations:
