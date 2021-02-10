@@ -1,4 +1,4 @@
 namespace: projectcontour
 
 resources:
-  - contour.yaml
+- contour.yaml
