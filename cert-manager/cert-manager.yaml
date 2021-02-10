@@ -26042,6 +26042,8 @@ rules:
   - configmaps
   verbs:
   - get
+  - list
+  - watch
   - update
   - patch
 - apiGroups:
@@ -26070,6 +26072,8 @@ rules:
   - configmaps
   verbs:
   - get
+  - list
+  - watch
   - update
   - patch
 - apiGroups:
@@ -26237,7 +26241,7 @@ spec:
       containers:
       - args:
         - --v=2
-        - --leader-election-namespace=cert-manager
+        - --leader-election-namespace=kube-system
         env:
         - name: POD_NAMESPACE
           valueFrom:
