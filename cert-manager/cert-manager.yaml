@@ -26031,7 +26031,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: cainjector
   name: cert-manager-cainjector:leaderelection
-  namespace: kube-system
+  namespace: cert-manager
 rules:
 - apiGroups:
   - ""
@@ -26062,7 +26062,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: cert-manager
   name: cert-manager:leaderelection
-  namespace: kube-system
+  namespace: cert-manager
 rules:
 - apiGroups:
   - ""
@@ -26121,7 +26121,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: cainjector
   name: cert-manager-cainjector:leaderelection
-  namespace: kube-system
+  namespace: cert-manager
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -26140,7 +26140,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: cert-manager
   name: cert-manager:leaderelection
-  namespace: kube-system
+  namespace: cert-manager
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -26241,7 +26241,7 @@ spec:
       containers:
       - args:
         - --v=2
-        - --leader-election-namespace=kube-system
+        - --leader-election-namespace=cert-manager
         env:
         - name: POD_NAMESPACE
           valueFrom:
@@ -26286,7 +26286,7 @@ spec:
       - args:
         - --v=2
         - --cluster-resource-namespace=$(POD_NAMESPACE)
-        - --leader-election-namespace=kube-system
+        - --leader-election-namespace=cert-manager
         env:
         - name: POD_NAMESPACE
           valueFrom:
