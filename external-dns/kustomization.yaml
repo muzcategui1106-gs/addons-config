@@ -1,4 +1,4 @@
-namepsace: default
+namespace: default
 
 resources:
 - external-dns.yaml
