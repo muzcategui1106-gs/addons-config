@@ -59,4 +59,3 @@ spec:
         - --google-project=sky-did-151096
         - --registry=txt
         - --txt-owner-id=my-identifier
-        - --dry-run
