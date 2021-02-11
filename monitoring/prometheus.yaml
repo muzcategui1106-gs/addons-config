@@ -1,0 +1,25 @@
+
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: prometheus
+spec:
+  containers:
+    ports:
+      - containerPort: 9090
+        hostPort: 80
+        name: web
+        protocl: TCP
+  serviceAccountName: prometheus
+  serviceMonitorNamespaceSelector:
+    matchLabels:
+      gs.com/monitoring: true
+  serviceMonitorSelector:
+    matchLabels:
+      gs.com/monitoring: true
+  podMonitorNamespaceSelector:
+    matchLabels:
+      gs.com/monitoring: true
+  podMonitorSelector:
+    matchLabels:
+      gs.com/monitoring: true

@@ -1821,7 +1821,6 @@ spec:
   selector:
     app: envoy
   type: LoadBalancer
-
 ---
 apiVersion: apps/v1
 kind: Deployment
